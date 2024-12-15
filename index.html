@@ -202,6 +202,8 @@
         // Vérifier si la vidéo se termine
         videoElement.addEventListener('ended', function () {
             accueil.play();
+            videoElement.pause();
+    videoElement.currentTime = 0;
             videoElement.style.display = 'none'; // Masquer la vidéo
             // Changer l'arrière-plan du body après la fin de la vidéo
             document.body.style.background = 'url("fin.gif") no-repeat center center fixed';
